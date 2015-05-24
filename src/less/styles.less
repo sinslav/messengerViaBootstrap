@@ -6,8 +6,12 @@
 			to {opacity: 0.3;} 
 		}
 
-
-	a:hover, a:focus  {text-decoration: none;}
+	a{
+		color: @text-color;
+		&:hover, &:focus  {
+			color: darken(@text-color, 10%);
+			text-decoration: none;}
+	}
 
 	.container	{
  		width: 960px !important;
@@ -266,9 +270,7 @@
 					}
 			}
 
-			&:hover{
-				cursor: pointer;
-			}	
+			
 		}
 
 			&-flag{
@@ -289,7 +291,8 @@
 				text-align: center;
 				background-color: lighten(@color-green, 28%);
 				border-radius: 5px;
-				color: lighten(@color-gray, 8%);
+				color:lighten(@color-green, 40%);
+				cursor: default;
 				}
 			.button{
 				width: 100%;
@@ -311,6 +314,35 @@
 	.notify{
 		margin-top: 15px; 
 		}
+	.inputer{
+		border-top: 5px solid lighten(@color-blue, 25%);
+		background-color: lighten(@color-blue, 30%);
+		width: 100%;
+		margin: @menu-height/2 auto;
+			textarea{
+				padding: @font-size-base/2;
+				width: 100%;
+				margin-top: @font-size-base;
+				resize:vertical;
+				height: 60px;
+				border: 1px solid lighten(@color-blue, 25%)
+
+			}
+			.submit-messenge{
+				border-radius: 5px;
+				background-color: lighten(@color-blue, 9%);
+				border:none;
+				color: @tab-text-color;
+				margin-bottom: @font-size-base;
+				padding: 5px 12px 5px 12px;
+				transition:.3s;
+					&:hover{
+					background-color: @color-blue;
+					}
+
+			}
+
+	}
 
 
 
