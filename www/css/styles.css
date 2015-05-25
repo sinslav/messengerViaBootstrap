@@ -5810,16 +5810,22 @@ a:focus {
   color: #647284;
   text-decoration: none;
 }
-.container {
+.wrapper {
   width: 960px !important;
   box-shadow: 0 -20px 30px 0 rgba(0, 0, 0, 0.1);
   min-height: calc(100vh - 75px);
 }
+.footer {
+  width: 960px !important;
+  margin: 0 auto;
+}
 .img-person {
   border-radius: 50%;
   margin-top: 6px;
-  -webkit-transition: .2s;
-          transition: .2s;
+  -webkit-transition: color .2s;
+          transition: color .2s;
+  -webkit-transition: opacity .2s;
+          transition: opacity .2s;
 }
 .img-person:hover {
   opacity: .85;
@@ -5831,8 +5837,8 @@ a:focus {
   padding: 12px;
   border-radius: 6px;
   background-color: #f1fbf3;
-  -webkit-transition: 0.2s;
-          transition: 0.2s;
+  -webkit-transition: background-color 0.2s;
+          transition: background-color 0.2s;
 }
 .text-bubble:hover {
   background-color: #eaf8ec;
@@ -5859,8 +5865,8 @@ header .logo {
   margin-right: auto;
   display: block;
   opacity: 1;
-  -webkit-transition: .2s;
-          transition: .2s;
+  -webkit-transition: opacity .2s;
+          transition: opacity .2s;
 }
 header .logo:hover {
   opacity: 0.9;
@@ -5938,8 +5944,6 @@ section .tab {
   color: #ffffff;
   padding: 8px 14px 8px 12px;
   opacity: 0.85;
-  -webkit-transition: all .3s;
-          transition: all .3s;
 }
 section .tab:hover,
 section .tab:focus {
@@ -5957,8 +5961,8 @@ section .tab-active {
 }
 section .tab-active .glyphicon-remove {
   margin-left: 12px;
-  -webkit-transition: .2s;
-          transition: .2s;
+  -webkit-transition: -webkit-transform 0.2s, text-shadow 0.2s;
+          transition: transform 0.2s, text-shadow 0.2s;
 }
 section .tab-active .glyphicon-remove:hover {
   -webkit-transform: rotate(-90deg);
@@ -5993,28 +5997,28 @@ section .one-messenge {
 }
 section .one-messenge .person {
   opacity: 1;
-  -webkit-transition: .2s;
-          transition: .2s;
+  -webkit-transition: opacity .2s;
+          transition: opacity .2s;
 }
 section .one-messenge .person:hover {
   opacity: .85;
   color: #6e6e6e;
 }
-section .one-messenge .person figcaption {
+section .one-messenge .person .person-info {
   padding-top: 12px;
 }
-section .one-messenge .person figcaption .date-time {
+section .one-messenge .person .person-info .date-time {
   font-size: 11px;
   color: #bbbbbb;
 }
-section .one-messenge .person figcaption .person-name {
+section .one-messenge .person .person-info .person-name {
   text-decoration: none;
   font-size: 13px;
   color: #647284;
   text-transform: uppercase;
   word-spacing: 1000px;
 }
-section .one-messenge .person figcaption .date-time {
+section .one-messenge .person .person-info .date-time {
   cursor: default;
 }
 section .one-messenge-answer .text-bubble::after {
@@ -6033,6 +6037,9 @@ section .one-messenge-answer .text-bubble::before {
       -ms-transform: rotate(45deg);
           transform: rotate(45deg);
   z-index: -1;
+}
+.sender {
+  padding: 0;
 }
 .right-col {
   min-height: 40vh;
@@ -6056,8 +6063,10 @@ section .one-messenge-answer .text-bubble::before {
   top: 12px;
   cursor: pointer;
   opacity: 0.4;
-  -webkit-transition: .2s;
-          transition: .2s;
+  -webkit-transition: opacity .2s;
+          transition: opacity .2s;
+  -webkit-transition: -webkit-transform .2s;
+          transition: transform .2s;
 }
 .right-col .text-bubble-right-col .glyphicon-remove:hover {
   opacity: 0.8;
@@ -6087,7 +6096,7 @@ section .one-messenge-answer .text-bubble::before {
   text-align: center;
   background-color: #bbeac3;
   border-radius: 5px;
-  color: #eaf8ec;
+  color: #f5fcf6;
   cursor: default;
 }
 .right-col .button {
@@ -6097,8 +6106,8 @@ section .one-messenge-answer .text-bubble::before {
   color: #fff;
   padding: 10px 0;
   text-transform: uppercase;
-  -webkit-transition: .2s;
-          transition: .2s;
+  -webkit-transition: background-color 0.2s;
+          transition: background-color 0.2s;
 }
 .right-col .button:hover {
   background-color: #4ec862;
@@ -6119,6 +6128,11 @@ section .one-messenge-answer .text-bubble::before {
   resize: vertical;
   height: 60px;
   border: 1px solid #cddef5;
+  -webkit-transition: height .2s;
+          transition: height .2s;
+}
+.inputer textarea:focus {
+  height: 90px;
 }
 .inputer .submit-messenge {
   border-radius: 5px;
@@ -6127,9 +6141,21 @@ section .one-messenge-answer .text-bubble::before {
   color: #ffffff;
   margin-bottom: 12px;
   padding: 5px 12px 5px 12px;
-  -webkit-transition: .3s;
-          transition: .3s;
+  -webkit-transition: background-color 0.3s;
+          transition: background-color 0.3s;
 }
 .inputer .submit-messenge:hover {
   background-color: #639adf;
+}
+footer {
+  background-color: #a1a1a1;
+  min-height: 75px;
+  color: #ffffff;
+}
+footer .copyright-text {
+  display: inline-block;
+  line-height: 75px;
+}
+footer .logo-f {
+  margin-top: 12px;
 }
