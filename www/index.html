@@ -2,7 +2,12 @@
 <html>
     <head>
         <title>Messenger via Bootstrap</title>
-<!--         <meta name="viewport" content="width=device-width, initial-scale=1.0"> -->        
+<meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+		<script src="js/jquery-2.1.4.min.js"></script>      
+		<script src="js/mustache.min.js"></script>      
+		<script src="js/lodash.min.js"></script>      
+		<script src="js/userList.js"></script>      
+		<script src="js/index.js"></script>      
 		 <link href="css/styles.css" rel="stylesheet">
         <!--[if lt IE 9]>
             <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
@@ -43,73 +48,8 @@
 					<a href="#" class="tab ">Persone Name</a>
 					<a href="#" class="tab ">Persone Name</a>
 					<a href="#" class="tab tab-new-mail"><i class="glyphicon glyphicon-envelope"></i>Persone Name</a></div>
+					<!-- DIALOGS START -->
 				<div class="col-xs-12 dialog">
-<!-- Одно сообщение начало -->
-						<div class="row one-messenge">
-							<div class="col-xs-4">
-							<figure class="row person">
-								<div class="col-xs-5">
-									<a href="#"><img class="img-person" src="http://placehold.it/64x64" alt="Person photo"></a>
-								</div>
-								<div class="xs-col-7 person no-side-padding">
-									<div class="person-info">
-										<a class="person-name" href="#">Name VerySurname</a>
-										<div class="date-time">18:30, today</div>
-									</div>
-								</div>
-									
-								</figure>
-							</div>
-							<div class="col-xs-8">
-								<div class="text-bubble">
-									<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium consectetur sequi magni ad, dolor facere eius, quia iusto quis aspernatur eum, laboriosam aliquam animi quisquam voluptatum, tempore est itaque! Facilis?</span>
-								</div>
-							</div></div>
-<!-- Одно сообщение конец -->	
-<!-- Одно сообщение начало -->
-						<div class="row one-messenge one-messenge-answer">
-							<div class="col-xs-4 col-xs-push-8">
-							<div class="row person">
-								<div class="col-xs-5 ">
-									<a href="#"><img class="img-person" src="http://placehold.it/64x64" alt="Person photo"></a>
-								</div>
-								<div class="xs-col-7 person no-side-padding">
-									<div class="person-info">
-										<a class="person-name" href="#">Name VerySurname</a>
-										<div class="date-time">18:30, today</div>
-									</div>
-								</div>
-									
-								</div>
-							</div>
-							<div class="col-xs-8 col-xs-pull-4">
-								<div class="text-bubble">
-									<span> <span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Hic ratione obcaecati iste at quidem esse ab eos quod eaque praesentium, consectetur vero voluptas omnis molestias asperiores, nobis aliquam. Eaque, quas.</span><span>Labore veritatis nostrum odio facilis autem, aliquid, provident, beatae perspiciatis quibusdam culpa veniam. Ut laborum, quam voluptas. Dolore, harum, perspiciatis laboriosam fugiat quibusdam, amet odit iure sapiente rem ducimus porro.</span> </span>
-								</div>
-							</div></div>
-<!-- Одно сообщение конец -->	
-<!-- Одно сообщение начало -->
-						<div class="row one-messenge">
-							<div class="col-xs-4">
-							<div class="row person">
-								<div class="col-xs-5">
-									<a href="#"><img class="img-person" src="http://placehold.it/64x64" alt="Person photo"></a>
-								</div>
-								<div class="xs-col-7 person no-side-padding">
-									<div class="person-info">
-										<a class="person-name" href="#">Name VerySurname</a>
-										<div class="date-time">18:30, today</div>
-									</div>
-								</div>
-									
-								</div>
-							</div>
-							<div class="col-xs-8">
-								<div class="text-bubble">
-									<span>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Laudantium consectetur sequi magni ad, dolor facere eius, quia iusto quis aspernatur eum, laboriosam aliquam animi quisquam voluptatum, tempore est itaque! Facilis?</span>
-								</div>
-							</div></div>
-<!-- Одно сообщение конец -->	
 					<div class="col-xs-12 sender">
 						<div class="row inputer .no-side-padding">
 							<div class="col-xs-2">
@@ -202,4 +142,29 @@
     	</div>
     </footer>
     </body>
+    <script type="x-tmpl-mustache" id='message-list'>
+    	{{#messages}}
+	    <div class="row one-messenge">
+			<div class="col-xs-4">
+			<figure class="row person">
+				<div class="col-xs-5">
+					<a href="#"><img class="img-person" src="http://placehold.it/64x64" alt="Person photo"></a>
+				</div>
+				<div class="xs-col-7 person no-side-padding">
+					<div class="person-info">
+						<a class="person-name" href="#">{{! user.name}}</a>
+						<div class="date-time">{{created_at}}</div>
+					</div>
+				</div>
+					
+				</figure>
+			</div>
+			<div class="col-xs-8">
+				<div class="text-bubble">
+					<span>{{text}}</span>
+				</div>
+			</div>
+		</div>
+    	{{/messages}}
+	</script>
 </html>
