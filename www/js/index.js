@@ -1,4 +1,5 @@
 
+// test
 
 for (var i = messages.length - 1; i >= 0; i--) {
 	var timeArray = messages[i].created_at.split(' ');  // преобразовал дату в массив разбив по пробелам
