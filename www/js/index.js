@@ -26,5 +26,5 @@ var template_right = document.getElementById('right-colomn').innerHTML;
         messages: messages,
         users: users
     };
-$('.right-col-btn').prepend(Mustache.render(template_right, data));
+$('.right-messeges').prepend(Mustache.render(template_right, data));
 });

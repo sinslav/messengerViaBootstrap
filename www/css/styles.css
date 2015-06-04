@@ -88,6 +88,7 @@ figure {
   margin: 1em 40px;
 }
 hr {
+  -moz-box-sizing: content-box;
   box-sizing: content-box;
   height: 0;
 }
@@ -147,6 +148,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 input[type="search"] {
   -webkit-appearance: textfield;
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
   box-sizing: content-box;
 }
 input[type="search"]::-webkit-search-cancel-button,
@@ -248,10 +251,14 @@ th {
   }
 }
 * {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 *:before,
 *:after {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 html {
@@ -1636,6 +1643,8 @@ label {
   font-weight: bold;
 }
 input[type="search"] {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
   box-sizing: border-box;
 }
 input[type="radio"],
@@ -1682,6 +1691,7 @@ output {
   background-image: none;
   border: 1px solid #cccccc;
   border-radius: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   -webkit-transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
   transition: border-color ease-in-out .15s, box-shadow ease-in-out .15s;
@@ -1689,6 +1699,7 @@ output {
 .form-control:focus {
   border-color: #66afe9;
   outline: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
   box-shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 8px rgba(102, 175, 233, 0.6);
 }
 .form-control:-moz-placeholder {
@@ -1829,10 +1840,12 @@ select[multiple].input-lg {
 }
 .has-success .form-control {
   border-color: #3c763d;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .has-success .form-control:focus {
   border-color: #2b542c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #67b168;
 }
 .has-success .input-group-addon {
@@ -1853,10 +1866,12 @@ select[multiple].input-lg {
 }
 .has-warning .form-control {
   border-color: #8a6d3b;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .has-warning .form-control:focus {
   border-color: #66512c;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #c0a16b;
 }
 .has-warning .input-group-addon {
@@ -1877,10 +1892,12 @@ select[multiple].input-lg {
 }
 .has-error .form-control {
   border-color: #a94442;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075);
 }
 .has-error .form-control:focus {
   border-color: #843534;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 6px #ce8483;
 }
 .has-error .input-group-addon {
@@ -1978,6 +1995,7 @@ select[multiple].input-lg {
   -webkit-user-select: none;
   -moz-user-select: none;
   -ms-user-select: none;
+  -o-user-select: none;
   user-select: none;
 }
 .btn:focus {
@@ -1994,6 +2012,7 @@ select[multiple].input-lg {
 .btn.active {
   outline: 0;
   background-image: none;
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 .btn.disabled,
@@ -2003,6 +2022,7 @@ fieldset[disabled] .btn {
   pointer-events: none;
   opacity: 0.65;
   filter: alpha(opacity=65);
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .btn-default {
@@ -2262,6 +2282,7 @@ fieldset[disabled] .btn-danger.active {
 .btn-link[disabled],
 fieldset[disabled] .btn-link {
   background-color: transparent;
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .btn-link,
@@ -2984,6 +3005,7 @@ input[type="button"].btn-block {
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.15);
   border-radius: 0;
+  -webkit-box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.175);
   background-clip: padding-box;
 }
@@ -3192,9 +3214,11 @@ input[type="button"].btn-block {
   padding-right: 12px;
 }
 .btn-group.open .dropdown-toggle {
+  -webkit-box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
   box-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
 }
 .btn-group.open .dropdown-toggle.btn-link {
+  -webkit-box-shadow: none;
   box-shadow: none;
 }
 .btn .caret {
@@ -3816,6 +3840,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
   padding: 10px 15px;
   border-top: 1px solid transparent;
   border-bottom: 1px solid transparent;
+  -webkit-box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.1), 0 1px 0 rgba(255, 255, 255, 0.1);
   margin-top: 9.5px;
   margin-bottom: 9.5px;
@@ -3865,6 +3890,7 @@ select[multiple].input-group-sm > .input-group-btn > .btn {
     margin-right: 0;
     padding-top: 0;
     padding-bottom: 0;
+    -webkit-box-shadow: none;
     box-shadow: none;
   }
   .navbar-form.navbar-right:last-child {
@@ -4491,6 +4517,7 @@ a.thumbnail.active {
   margin-bottom: 17px;
   background-color: #f5f5f5;
   border-radius: 0;
+  -webkit-box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
   box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.1);
 }
 .progress-bar {
@@ -4502,6 +4529,7 @@ a.thumbnail.active {
   color: #ffffff;
   text-align: center;
   background-color: #428bca;
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
   -webkit-transition: width 0.6s ease;
   transition: width 0.6s ease;
@@ -4728,6 +4756,7 @@ a.list-group-item-danger.active:focus {
   background-color: #ffffff;
   border: 1px solid transparent;
   border-radius: 0;
+  -webkit-box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 .panel-body {
@@ -5012,6 +5041,7 @@ a.list-group-item-danger.active:focus {
   background-color: #f5f5f5;
   border: 1px solid #e3e3e3;
   border-radius: 0;
+  -webkit-box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.05);
 }
 .well blockquote {
@@ -5072,6 +5102,8 @@ button.close {
   -ms-transform: translate(0, -25%);
   transform: translate(0, -25%);
   -webkit-transition: -webkit-transform 0.3s ease-out;
+  -moz-transition: -moz-transform 0.3s ease-out;
+  -o-transition: -o-transform 0.3s ease-out;
   transition: transform 0.3s ease-out;
 }
 .modal.in .modal-dialog {
@@ -5090,6 +5122,7 @@ button.close {
   border: 1px solid #999999;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
+  -webkit-box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   box-shadow: 0 3px 9px rgba(0, 0, 0, 0.5);
   background-clip: padding-box;
   outline: none;
@@ -5149,6 +5182,7 @@ button.close {
     margin: 30px auto;
   }
   .modal-content {
+    -webkit-box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
   }
   .modal-sm {
@@ -5270,6 +5304,7 @@ button.close {
   border: 1px solid #cccccc;
   border: 1px solid rgba(0, 0, 0, 0.2);
   border-radius: 6px;
+  -webkit-box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
   white-space: normal;
 }
@@ -5440,7 +5475,6 @@ button.close {
 }
 .carousel-control.left {
   background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.5) 0%), color-stop(rgba(0, 0, 0, 0.0001) 100%));
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
@@ -5449,7 +5483,6 @@ button.close {
   left: auto;
   right: 0;
   background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.0001) 0%), color-stop(rgba(0, 0, 0, 0.5) 100%));
-  background-image: -webkit-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
   background-repeat: repeat-x;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
@@ -5786,14 +5819,6 @@ td.visible-print {
     display: none !important;
   }
 }
-@-webkit-keyframes blink {
-  from {
-    opacity: 1;
-  }
-  to {
-    opacity: 0.3;
-  }
-}
 @keyframes blink {
   from {
     opacity: 1;
@@ -5822,10 +5847,8 @@ a:focus {
 .img-person {
   border-radius: 50%;
   margin-top: 6px;
-  -webkit-transition: color .2s;
-          transition: color .2s;
-  -webkit-transition: opacity .2s;
-          transition: opacity .2s;
+  transition: color .2s;
+  transition: opacity .2s;
 }
 .img-person:hover {
   opacity: .85;
@@ -5837,8 +5860,7 @@ a:focus {
   padding: 12px;
   border-radius: 6px;
   background-color: #f1fbf3;
-  -webkit-transition: background-color 0.2s;
-          transition: background-color 0.2s;
+  transition: background-color 0.2s;
 }
 .text-bubble:hover {
   background-color: #eaf8ec;
@@ -5853,9 +5875,7 @@ a:focus {
   background-color: inherit;
   top: 20px;
   left: -5px;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
 }
 .text-bubble-right-col:hover {
   background-color: #e6f7e9;
@@ -5865,8 +5885,7 @@ header .logo {
   margin-right: auto;
   display: block;
   opacity: 1;
-  -webkit-transition: opacity .2s;
-          transition: opacity .2s;
+  transition: opacity .2s;
 }
 header .logo:hover {
   opacity: 0.9;
@@ -5913,13 +5932,10 @@ header .nav .menu li a:after {
   left: 0;
   bottom: 8px;
   opacity: 0;
-  -webkit-transition: -webkit-transform .15s, opacity .15s;
-          transition: transform .15s, opacity .15s;
+  transition: transform .15s, opacity .15s;
 }
 header .nav .menu li a:hover:after {
-  -webkit-transform: translateY(-8px);
-      -ms-transform: translateY(-8px);
-          transform: translateY(-8px);
+  transform: translateY(-8px);
   opacity: .4;
   border-radius: 2px;
 }
@@ -5952,8 +5968,7 @@ section .tab:focus {
 }
 section .tab-new-mail .glyphicon-envelope {
   margin-right: 12px;
-  -webkit-animation: blink 0.3s ease-in-out 0.3s 4 alternate both;
-          animation: blink 0.3s ease-in-out 0.3s 4 alternate both;
+  animation: blink 0.3s ease-in-out 0.3s 4 alternate both;
   top: 2px;
 }
 section .tab-active {
@@ -5961,22 +5976,15 @@ section .tab-active {
 }
 section .tab-active .glyphicon-remove {
   margin-left: 12px;
-  -webkit-transition: -webkit-transform 0.2s, text-shadow 0.2s;
-          transition: transform 0.2s, text-shadow 0.2s;
+  transition: transform 0.2s, text-shadow 0.2s;
 }
 section .tab-active .glyphicon-remove:hover {
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
-  -webkit-transform-origin: 50% 50% 0;
-      -ms-transform-origin: 50% 50% 0;
-          transform-origin: 50% 50% 0;
+  transform: rotate(-90deg);
+  transform-origin: 50% 50% 0;
   text-shadow: 1px 0px 12px #7b7b7b;
 }
 section .tab-active .glyphicon-remove:active {
-  -webkit-transform: translateY(1px) rotate(-90deg);
-      -ms-transform: translateY(1px) rotate(-90deg);
-          transform: translateY(1px) rotate(-90deg);
+  transform: translateY(1px) rotate(-90deg);
 }
 section .tab-active:after {
   content: "";
@@ -5987,9 +5995,7 @@ section .tab-active:after {
   width: 10px;
   height: 10px;
   background-color: inherit;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   z-index: -1;
 }
 section .one-messenge {
@@ -5997,8 +6003,7 @@ section .one-messenge {
 }
 section .one-messenge .person {
   opacity: 1;
-  -webkit-transition: opacity .2s;
-          transition: opacity .2s;
+  transition: opacity .2s;
 }
 section .one-messenge .person:hover {
   opacity: .85;
@@ -6033,9 +6038,7 @@ section .one-messenge-answer .text-bubble::before {
   background-color: inherit;
   top: 20px;
   right: -5px;
-  -webkit-transform: rotate(45deg);
-      -ms-transform: rotate(45deg);
-          transform: rotate(45deg);
+  transform: rotate(45deg);
   z-index: -1;
 }
 .sender {
@@ -6044,6 +6047,7 @@ section .one-messenge-answer .text-bubble::before {
 .right-col {
   min-height: 40vh;
   margin-top: 15px;
+  margin-bottom: 15px;
   background-color: #d6f2db;
   padding: 15px;
 }
@@ -6063,21 +6067,15 @@ section .one-messenge-answer .text-bubble::before {
   top: 12px;
   cursor: pointer;
   opacity: 0.4;
-  -webkit-transition: opacity .2s;
-          transition: opacity .2s;
-  -webkit-transition: -webkit-transform .2s;
-          transition: transform .2s;
+  transition: opacity .2s;
+  transition: transform .2s;
 }
 .right-col .text-bubble-right-col .glyphicon-remove:hover {
   opacity: 0.8;
-  -webkit-transform: rotate(-90deg);
-      -ms-transform: rotate(-90deg);
-          transform: rotate(-90deg);
+  transform: rotate(-90deg);
 }
 .right-col .text-bubble-right-col .glyphicon-remove:active {
-  -webkit-transform: rotate(-90deg) translateX(-1px);
-      -ms-transform: rotate(-90deg) translateX(-1px);
-          transform: rotate(-90deg) translateX(-1px);
+  transform: rotate(-90deg) translateX(-1px);
 }
 .right-col-flag {
   display: block;
@@ -6106,8 +6104,7 @@ section .one-messenge-answer .text-bubble::before {
   color: #fff;
   padding: 10px 0;
   text-transform: uppercase;
-  -webkit-transition: background-color 0.2s;
-          transition: background-color 0.2s;
+  transition: background-color 0.2s;
 }
 .right-col .button:hover {
   background-color: #4ec862;
@@ -6128,8 +6125,7 @@ section .one-messenge-answer .text-bubble::before {
   resize: vertical;
   height: 60px;
   border: 1px solid #cddef5;
-  -webkit-transition: height .2s;
-          transition: height .2s;
+  transition: height .2s;
 }
 .inputer textarea:focus {
   height: 90px;
@@ -6141,8 +6137,7 @@ section .one-messenge-answer .text-bubble::before {
   color: #ffffff;
   margin-bottom: 12px;
   padding: 5px 12px 5px 12px;
-  -webkit-transition: background-color 0.3s;
-          transition: background-color 0.3s;
+  transition: background-color 0.3s;
 }
 .inputer .submit-messenge:hover {
   background-color: #639adf;

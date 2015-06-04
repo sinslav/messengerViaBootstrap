@@ -5827,16 +5827,65 @@ td.visible-print {
     opacity: 0.3;
   }
 }
-.container {
+a {
+  color: #7e8c9d;
+}
+a:hover,
+a:focus {
+  color: #647284;
+  text-decoration: none;
+}
+.wrapper {
   width: 960px !important;
   box-shadow: 0 -20px 30px 0 rgba(0, 0, 0, 0.1);
+  min-height: calc(100vh - 75px);
+}
+.footer {
+  width: 960px !important;
+  margin: 0 auto;
+}
+.img-person {
+  border-radius: 50%;
+  margin-top: 6px;
+  transition: color .2s;
+  transition: opacity .2s;
+}
+.img-person:hover {
+  opacity: .85;
+  color: #6e6e6e;
+}
+.text-bubble {
+  position: relative;
+  box-sizing: border-box;
+  padding: 12px;
+  border-radius: 6px;
+  background-color: #f1fbf3;
+  transition: background-color 0.2s;
+}
+.text-bubble:hover {
+  background-color: #eaf8ec;
+  cursor: default;
+}
+.text-bubble::after {
+  content: "";
+  display: inline-block;
+  position: absolute;
+  width: 10px;
+  height: 10px;
+  background-color: inherit;
+  top: 20px;
+  left: -5px;
+  transform: rotate(45deg);
+}
+.text-bubble-right-col:hover {
+  background-color: #e6f7e9;
 }
 header .logo {
   margin-left: auto;
   margin-right: auto;
   display: block;
   opacity: 1;
-  transition: .2s;
+  transition: opacity .2s;
 }
 header .logo:hover {
   opacity: 0.9;
@@ -5911,7 +5960,6 @@ section .tab {
   color: #ffffff;
   padding: 8px 14px 8px 12px;
   opacity: 0.85;
-  transition: all .3s;
 }
 section .tab:hover,
 section .tab:focus {
@@ -5928,7 +5976,7 @@ section .tab-active {
 }
 section .tab-active .glyphicon-remove {
   margin-left: 12px;
-  transition: .2s;
+  transition: transform 0.2s, text-shadow 0.2s;
 }
 section .tab-active .glyphicon-remove:hover {
   transform: rotate(-90deg);
@@ -5955,57 +6003,28 @@ section .one-messenge {
 }
 section .one-messenge .person {
   opacity: 1;
-  transition: .2s;
+  transition: opacity .2s;
 }
 section .one-messenge .person:hover {
   opacity: .85;
   color: #6e6e6e;
 }
-section .one-messenge .person .img-person {
-  border-radius: 50%;
-  margin-top: 6px;
-  transition: .2s;
-}
-section .one-messenge .person figcaption {
+section .one-messenge .person .person-info {
   padding-top: 12px;
 }
-section .one-messenge .person figcaption .date-time {
+section .one-messenge .person .person-info .date-time {
   font-size: 11px;
   color: #bbbbbb;
 }
-section .one-messenge .person figcaption .person-name {
+section .one-messenge .person .person-info .person-name {
   text-decoration: none;
   font-size: 13px;
   color: #647284;
   text-transform: uppercase;
   word-spacing: 1000px;
 }
-section .one-messenge .person figcaption .date-time {
+section .one-messenge .person .person-info .date-time {
   cursor: default;
-}
-section .one-messenge .text-bubble {
-  position: relative;
-  box-sizing: border-box;
-  padding: 12px;
-  border-radius: 6px;
-  background-color: #f1fbf3;
-  transition: 0.2s;
-}
-section .one-messenge .text-bubble:hover {
-  background-color: #eaf8ec;
-  cursor: default;
-}
-section .one-messenge .text-bubble::after {
-  content: "";
-  display: inline-block;
-  position: absolute;
-  width: 10px;
-  height: 10px;
-  background-color: inherit;
-  top: 20px;
-  left: -5px;
-  transform: rotate(45deg);
-  z-index: -1;
 }
 section .one-messenge-answer .text-bubble::after {
   display: none;
@@ -6021,4 +6040,116 @@ section .one-messenge-answer .text-bubble::before {
   right: -5px;
   transform: rotate(45deg);
   z-index: -1;
+}
+.sender {
+  padding: 0;
+}
+.right-col {
+  min-height: 40vh;
+  margin-top: 15px;
+  background-color: #d6f2db;
+  padding: 15px;
+}
+.right-col .name {
+  display: block;
+  text-transform: uppercase;
+  padding: 5px;
+  font-weight: bold;
+  color: #9ba6b3;
+}
+.right-col .text-bubble-right-col {
+  color: #7e8c9d;
+}
+.right-col .text-bubble-right-col .glyphicon-remove {
+  position: absolute;
+  right: 12px;
+  top: 12px;
+  cursor: pointer;
+  opacity: 0.4;
+  transition: opacity .2s;
+  transition: transform .2s;
+}
+.right-col .text-bubble-right-col .glyphicon-remove:hover {
+  opacity: 0.8;
+  transform: rotate(-90deg);
+}
+.right-col .text-bubble-right-col .glyphicon-remove:active {
+  transform: rotate(-90deg) translateX(-1px);
+}
+.right-col-flag {
+  display: block;
+  text-transform: uppercase;
+  color: #fff;
+  font-size: 14px;
+  line-height: 36px;
+  text-align: center;
+  background-color: #9ce0a7;
+  cursor: default;
+}
+.right-col-no-dialogs {
+  display: block;
+  font-size: 13px;
+  padding: 12px;
+  text-align: center;
+  background-color: #bbeac3;
+  border-radius: 5px;
+  color: #f5fcf6;
+  cursor: default;
+}
+.right-col .button {
+  width: 100%;
+  background-color: #75d485;
+  border: none;
+  color: #fff;
+  padding: 10px 0;
+  text-transform: uppercase;
+  transition: background-color 0.2s;
+}
+.right-col .button:hover {
+  background-color: #4ec862;
+}
+.notify {
+  margin-top: 15px;
+}
+.inputer {
+  border-top: 5px solid #cddef5;
+  background-color: #e2ecf9;
+  width: 100%;
+  margin: 37.5px auto;
+}
+.inputer textarea {
+  padding: 6px;
+  width: 100%;
+  margin-top: 12px;
+  resize: vertical;
+  height: 60px;
+  border: 1px solid #cddef5;
+  transition: height .2s;
+}
+.inputer textarea:focus {
+  height: 90px;
+}
+.inputer .submit-messenge {
+  border-radius: 5px;
+  background-color: #89b3e7;
+  border: none;
+  color: #ffffff;
+  margin-bottom: 12px;
+  padding: 5px 12px 5px 12px;
+  transition: background-color 0.3s;
+}
+.inputer .submit-messenge:hover {
+  background-color: #639adf;
+}
+footer {
+  background-color: #a1a1a1;
+  min-height: 75px;
+  color: #ffffff;
+}
+footer .copyright-text {
+  display: inline-block;
+  line-height: 75px;
+}
+footer .logo-f {
+  margin-top: 12px;
 }
