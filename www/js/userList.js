@@ -45,25 +45,9 @@ var messages = [
 	created_at: 'Mon Jun 02 2015 16:22:08 GMT+0300 (EEST)',
 	updated_at:  'Mon Jun 03 2015 16:25:08 GMT+0300 (EEST)',
 	sender_id: 1,
-	dialog_id: 1
-},
-{
-	id: 2,
-	text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem unde quod id aliquam quo laborum, est tenetur iste similique possimus, vero. Et at sunt, deserunt non commodi consectetur illo accusantium.',
-	created_at: 'Mon Jun 04 2015 16:22:08 GMT+0300 (EEST)',
-	updated_at:  'Mon Jun 05 2015 16:25:08 GMT+0300 (EEST)',
-	sender_id: 2,
-	dialog_id: 1
-},
-{
-	id: 3,
-	text: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolorem unde quod id aliquam quo laborum, est tenetur iste similique possimus, vero. Et at sunt, deserunt non commodi consectetur illo accusantium.',
-	created_at: 'Mon Jun 05 2015 16:22:08 GMT+0300 (EEST)',
-	updated_at:  'Mon Jun 06 2015 16:25:08 GMT+0300 (EEST)',
-	sender_id: 3,
-	dialog_id: 1
+	dialog_id: 1,
+	right_colomn_text: 'old-for-test'
 }
-
 ];
 
 var dialogs = [
